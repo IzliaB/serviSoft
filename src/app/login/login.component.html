@@ -1,0 +1,61 @@
+<body>
+    <div class="cont">
+      <div class="form sign-in">
+        <form name="form" (ngSubmit)="login()" #f="ngForm">   
+        <h2>Login</h2> 
+        <label>
+          <span>Correo Electrónico</span>
+          <input type="text" name="Correo" [(ngModel)]="model.Correo" class="form-control sty1" placeholder="Correo" required>  
+        </label>
+        <label>
+          <span>Contraseña</span>
+          <input type="password" name="Contraseña" [(ngModel)]="model.Contraseña" class="form-control sty1" placeholder="Contraseña" required>  
+        </label>
+        <div>  
+          <span style="color:#E92626;font-size:20px;font-weight:normal" Class="success" allign="left">  
+            {{errorMessage}}  
+          </span>  
+        </div> 
+        <button class="submit" type="button">Login</button>    
+      </div>
+  
+      <div class="sub-cont">
+        <div class="img">
+          <div class="img-text m-up">
+            <h2>¿Nuevo aquí?</h2>
+            <p>¡Regístrate y descubre una gran cantidad de nuevas oportunidades!</p>
+          </div>
+          <div class="img-text m-in">
+            <h2>¿Ya eres uno de nosotros?</h2>
+            <p>Si ya tiene una cuenta, inicie sesión. ¡Lo extrañamos!</p>
+          </div>
+          <div class="img-btn">
+            <span class="m-up">Registrarse</span>
+            <span class="m-in">Login</span>
+          </div>
+        </div>
+        <div class="form sign-up">
+          <h2>Registrarse</h2>
+          <label>
+            <span>Nombre</span>
+            <input type="text">
+          </label>
+          <label>
+            <span>Correo</span>
+            <input type="correo" formControlName="Correo">
+          </label>
+          <label>
+            <span>Contraseña</span>
+            <input type="contraseña" formControlName="Contraseña">
+          </label>
+          <label>
+            <span>Confirmar Contraseña</span>
+            <input type="contraseña">
+          </label>
+          <button type="submit" class="btn">Registrarse Ahora</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </body>
+  <router-outlet></router-outlet>
